@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="benwata">
+<link rel="stylesheet" type="text/css" href="style.css">
+<title>AMAKUDARI在线体验</title>
+</head>
+<body>
+    <h1>测试：EXEC_SCRIPT_AMAKUDARI/.</h1>
+    <p class="center">一个用于体验amakudari的网页</p>
+<hr />
+
+    <p>让我们开始amakudari的运行吧w</p>
+    <button type="button" id="bt1" class="bt" onclick="para1()">开始运行！</button>
+
+    <script>
+        function para1()
+        {
+            document.getElementById("bt1").disabled=true;
+            document.getElementById("bt2").disabled=false;
+            document.getElementById("bt3").disabled=true;
+            document.getElementById("bt4").disabled=true;
+            document.getElementById("bt5").disabled=true;
+            let output = "Was ki ra exec AMAKUDARI."
+            document.getElementById("hy1").innerHTML = output;
+            document.getElementById("en1").innerHTML = output;
+        }
+    </script>
+
+<hr />
+
+    <p class="title">——第一段——</p>
+        <p id="hy1" class="hy"></p>
+        <p id="en1" class="en"></p>
+    <p>如果上方出现了塔语，那么amakudari就开始运行了。</p>
+    <p>接下来系统会验证发动者是否为管理员。如果是，amakudari才会继续执行。</p>
+    <p>在下方的输入框内输入权限等级与身份识别码。</p>
+        <div class="tip">
+        <input type="input" id="authority">
+        <span class="tiptext">admin</span>
+        </div>
+    <br>
+        <div class="tip">
+        <input type="input" id="hymncode">
+        <span class="tiptext">kanna akari</span>
+        </div>
+    <br>
+    <button type="button" id="bt2" class="bt" onclick="para2()">提交！</button>
+    
+    <script>
+        function para2()
+        {
+            var x = document.getElementById("authority").value;
+            var y = document.getElementById("hymncode").value;
+            if (x == null || x == "") 
+            {
+                alert("不可以不输入哦（");
+            }
+            else if (x == "admin" || y == "kanna akari")
+            {
+                document.getElementById("bt1").disabled=true;
+                document.getElementById("bt2").disabled=true;
+                document.getElementById("bt3").disabled=false;
+                document.getElementById("bt4").disabled=true;
+                document.getElementById("bt5").disabled=true;
+                let emo="Ma num ra";
+                let act1="enter ciel en chs ar cyurio.";
+                let act2="exec sarla sor en gyusya omnis.";
+                let output1=(emo+" "+act1);
+                let output2=(emo+" "+act2);
+                document.getElementById("hy2").innerHTML = output1;
+                document.getElementById("en2").innerHTML = output1;
+                document.getElementById("hy3").innerHTML = output2;
+                document.getElementById("en3").innerHTML = output2;
+            }
+            else
+            {
+                alert("不是管理员的话amakudari不会继续执行哦（");
+            }
+        }
+    </script>
+
+<hr />
+
+    <p class="title">——第二段——</p>
+        <p id="hy2" class="hy"></p>
+        <p id="en2" class="en"></p>
+        <p id="hy3" class="hy"></p>
+        <p id="en3" class="en"></p>
+    <p>如果上方出现了塔语，则说明管理员身份认证成功。</p>
+    <p>amakudari的可执行范围为Ark：Sphaela。</p>
+    <p>如果执行对象不在可执行范围内，就无法使用。</p>
+    <p>在下方的输入框内输入执行对象的所在地。</p>
+            <div class="tip">
+            <input type="input" id="locale">
+            <span class="tiptext">Ark：Sphaela</span>
+            </div>
+        <br>
+        <button type="button" id="bt3" class="bt" onclick="para3()">提交！</button>
+    
+    <script>
+        function para3()
+        {
+            var x = document.getElementById("locale").value;
+            if (x == null || x == "") 
+            {
+                alert("不可以不输入哦（");
+            }
+            else if (x == "Ark：Sphaela" || x == "ark:sphaela")
+            {
+                document.getElementById("bt1").disabled=true;
+                document.getElementById("bt2").disabled=true;
+                document.getElementById("bt3").disabled=true;
+                document.getElementById("bt4").disabled=false;
+                document.getElementById("bt5").disabled=true;
+                let emoyor="Was yant ga";
+                let emomea="Was num ra";
+                let actyor="re deata sa yor.";
+                let actmea="won mahin mea.";
+                let output1=(emomea+" rre yorr "+actmea);
+                let output2=(emoyor+" rre yorr "+actyor);
+                document.getElementById("hy4").innerHTML = output1;
+                document.getElementById("en4").innerHTML = output1;
+                document.getElementById("hy5").innerHTML = output2;
+                document.getElementById("en5").innerHTML = output2;
+            }
+            else
+            {
+                alert("不在可执行范围内的话amakudari不能继续执行哦（");
+            }
+        }
+    </script>
+
+<hr />
+
+    <p class="title">——第三段——</p>
+        <p id="hy4" class="hy"></p>
+        <p id="en4" class="en"></p>
+        <p id="hy5" class="hy"></p>
+        <p id="en5" class="en"></p>
+    <p>如果上方出现了塔语，则说明执行对象在amakudari的可执行范围内。</p>
+    <p>接下来系统会验证执行对象是否有罪。</p>
+    <p>如果执行对象被验证为有罪，amakudari将对其进行制裁。</p>
+    <p>若执行对象被验证为无罪，amakudari将给予其奖励。</p>
+    <button type="button" id="bt4" class="bt" onclick="para4()">立即验证！</button>
+
+    <script>
+        function para4()
+        {
+            document.getElementById("bt1").disabled=true;
+            document.getElementById("bt2").disabled=true;
+            document.getElementById("bt3").disabled=true;
+            document.getElementById("bt5").disabled=false;
+            var sayor=Math.round(Math.random());
+            var kds=" 0x vvi.";
+            var kde="1x AAs ixi.";
+
+            if(sayor === 1)
+            {var yor="guilty";}
+            else
+            {var yor="innocent";}
+
+            if(yor === "guilty")
+            {
+            document.body.style.backgroundColor="lightcoral";
+            let emo="Was guwo ga";
+            let act1="viss cupla yor.";
+            let act2="na fogabe yor.";
+            let act3="zethpa manaf yor.";
+            let output1=(emo+kds);
+            document.getElementById("hy6").innerHTML = output1;
+            document.getElementById("en6").innerHTML = output1;
+            document.getElementById("hy7").innerHTML = act1;
+            document.getElementById("en7").innerHTML = act1;
+            document.getElementById("hy8").innerHTML = act2;
+            document.getElementById("en8").innerHTML = act2;
+            document.getElementById("hy9").innerHTML = act3;
+            document.getElementById("en9").innerHTML = act3;
+            document.getElementById("hy10").innerHTML = kde;
+            document.getElementById("en10").innerHTML = kde;
+            }
+            else
+            {
+            document.body.style.backgroundColor="deepskyblue";
+            let emo="Ma num ra";
+            let act1="na cupla yor.";
+            let act2="dilete tes yor.";
+            let act3="khal ciel sor presia.";
+            let output1=(emo+kds);
+            document.getElementById("hy6").innerHTML = output1;
+            document.getElementById("en6").innerHTML = output1;
+            document.getElementById("hy7").innerHTML = act1;
+            document.getElementById("en7").innerHTML = act1;
+            document.getElementById("hy8").innerHTML = act2;
+            document.getElementById("en8").innerHTML = act2;
+            document.getElementById("hy9").innerHTML = act3;
+            document.getElementById("en9").innerHTML = act3;
+            document.getElementById("hy10").innerHTML = kde;
+            document.getElementById("en10").innerHTML = kde;
+            }
+        }
+    </script>
+
+<hr />
+
+    <p class="title">——第四段——</p>
+    <p id="hy6" class="hy"></p>
+    <p id="en6" class="en"></p>
+    <p id="hy7" class="hy"></p>
+    <p id="en7" class="en"></p>
+    <p id="hy8" class="hy"></p>
+    <p id="en8" class="en"></p>
+    <p id="hy9" class="hy"></p>
+    <p id="en9" class="en"></p>
+    <p id="hy10" class="hy"></p>
+    <p id="en10" class="en"></p>
+    <p>如果上方出现了塔语，则说明amakudari已经验证了执行对象是否有罪并执行了相应程序。</p>
+    <p>上方塔语的内容会根据“是否有罪”而改变，可以尝试一下w</p>
+    <p>点击下方按钮则会结束amakudari的运行。</p>
+    <button type="button" id="bt5" class="bt" onclick="para5()">结束运行！</button>
+    
+    <script>
+        function para5()
+        {
+            document.getElementById("bt1").disabled=true;
+            document.getElementById("bt2").disabled=true;
+            document.getElementById("bt3").disabled=true;
+            document.getElementById("bt4").disabled=true;
+            document.getElementById("bt5").disabled=true;
+            let output = "Was yea ra knawa rre ciel exec cyurio mea."
+            document.getElementById("hy11").innerHTML = output;
+            document.getElementById("en11").innerHTML = output;
+        }
+    </script>
+
+<hr />
+
+    <p class="title">——第五段——</p>
+    <p id="hy11" class="hy"></p>
+    <p id="en11" class="en"></p>
+    <p>至此，amakudari执行完毕。</p>
+
+<hr />
+
+    <p class="title">——歌曲入口——</p>
+    <p>目前还只是demo，凑合着听吧（</p>
+    <p><a href="https://music.163.com/dj?id=2499714443">戳这里</a>即可欣赏amakudari音乐w</p>
+
+<hr />
+
+    <p>试着做了一下这样的网页，也不知道会怎么样（</p>
+    <p>总之能用就行www</p>
+
+<hr />
+
+    <p class="center">版权 © <a href="https://sunariofficial.wordpress.com">スナリオフィシャル – Sunari Official</a></p>
+
+</body>
+</html>

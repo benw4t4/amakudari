@@ -1,0 +1,120 @@
+@font-face
+{
+    font-family: ch;
+    src: url('JosefinSans-SemiBold.ttf')
+}
+
+@font-face
+{
+    font-family: en;
+    src: url('segoeuii.ttf')
+}
+
+@font-face
+{
+    font-family: hy;
+    src: url('hymmnos.ttf')
+}
+
+body
+{
+    background-color:rgb(196, 166, 253);
+}
+
+h1
+{
+    text-align:center;
+    font-family: ch;
+    font-size:30px;
+}
+
+p.center
+{
+    text-align:center;
+    font-family: ch;
+    font-size:18px;
+}
+
+p.title
+{
+    font-family: ch;
+    font-size:24px;
+}
+
+p
+{
+    font-family: ch;
+    font-size:18px;
+}
+
+p.en
+{
+    color: blueviolet;
+    font-family: en;
+    font-size:15px;
+}
+
+p.hy
+{
+    color: blueviolet;
+    font-family: hy;
+    font-size:25px;
+}
+
+.bt
+{
+    background: #d9d2e9;
+    background-image: -webkit-linear-gradient(top, #d9d2e9, #d5a6bd);
+    background-image: -moz-linear-gradient(top, #d9d2e9, #d5a6bd);
+    background-image: -ms-linear-gradient(top, #d9d2e9, #d5a6bd);
+    background-image: -o-linear-gradient(top, #d9d2e9, #d5a6bd);
+    background-image: linear-gradient(to bottom, #d9d2e9, #d5a6bd);
+    -webkit-border-radius: 10;
+    -moz-border-radius: 10;
+    border-radius: 10px;
+    font-family: ch;
+    color: white;
+    font-size: 15px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+}
+  
+.bt:hover
+{
+    background: #f4cccc;
+    background-image: -webkit-linear-gradient(top, #f4cccc, #9fc5e8);
+    background-image: -moz-linear-gradient(top, #f4cccc, #9fc5e8);
+    background-image: -ms-linear-gradient(top, #f4cccc, #9fc5e8);
+    background-image: -o-linear-gradient(top, #f4cccc, #9fc5e8);
+    background-image: linear-gradient(to bottom, #f4cccc, #9fc5e8);
+    text-decoration: none;
+}
+
+.tip
+{
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tip .tiptext
+{
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    font-family: ch;
+    border-radius: 6px;
+    padding: 5px 0;
+    
+    position: absolute;
+    z-index: 1;
+    top: -5px;
+    left: 105%;
+}
+
+.tip:hover .tiptext
+{
+    visibility: visible;
+}
